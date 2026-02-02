@@ -21,7 +21,7 @@ export function Home() {
   return (
     <div className="flex flex-col overflow-hidden bg-white dark:bg-black">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Abstract Background */}
         <div className="absolute inset-0 bg-slate-50 dark:bg-black transition-colors duration-500">
            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
@@ -37,7 +37,7 @@ export function Home() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-500/30 text-indigo-600 dark:text-indigo-400 text-sm font-medium mb-8">
               <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse shadow-[0_0_10px_rgba(99,102,241,0.5)]"></span>
-              Hacked? We’ll get your business back on track
+              Hacked? We'll get your business back on track
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-tight text-slate-900 dark:text-white">
