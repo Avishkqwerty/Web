@@ -21,11 +21,11 @@ export function Home() {
   return (
     <div className="flex flex-col overflow-hidden bg-white dark:bg-black">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-start justify-center pt-10 px-4 overflow-hidden">
+      <section className="relative min-h-screen flex items-start justify-center pt-6 px-4 overflow-hidden">
         {/* Abstract Background */}
         <div className="absolute inset-0 bg-slate-50 dark:bg-black transition-colors duration-500">
-           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-           <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-transparent blur-[100px]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+          <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-transparent blur-[100px]"></div>
         </div>
         
         <div className="max-w-7xl mx-auto text-center z-10 space-y-6 relative">
@@ -40,7 +40,7 @@ export function Home() {
               Hacked? We’ll get your business back on track
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-snug text-slate-900 dark:text-white mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-snug text-slate-900 dark:text-white mb-6">
               Safeguarding the <br />
               <GradientText>digital frontier</GradientText>
             </h1>
