@@ -10,7 +10,6 @@ const navItems = [
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Events", path: "/events" },
-  { name: "Education at HashX", path: "/education" },
 ];
 
 export function Navbar() {
