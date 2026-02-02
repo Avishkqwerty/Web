@@ -9,19 +9,23 @@ export function Footer() {
     <footer className="bg-slate-50 dark:bg-black border-t border-gray-200 dark:border-white/10 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
           {/* Brand Column */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold shadow-md">
-                H
-              </div>
-              <span className="font-bold text-xl text-slate-900 dark:text-white">HashX</span>
+            <Link to="/" className="flex items-center">
+              <img
+                src="https://edux.hashx.live/assets/logo_hashx-CafftDCR.png"
+                alt="HashX Logo"
+                className="h-10 w-auto object-contain hover:scale-105 transition-transform"
+              />
             </Link>
+
             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
               Transforming Ideas into Digital Excellence. Elevate your online
               presence with our innovative solutions and strategic digital
               services.
             </p>
+
             <div className="flex gap-4">
               {[
                 { icon: Facebook, href: "#" },
@@ -79,7 +83,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-gray-200 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-slate-500 dark:text-slate-500">
-            Copyright© 2026 HashX, All rights reserved.
+            Copyright © 2026 HashX. All rights reserved.
           </p>
 
           <button
