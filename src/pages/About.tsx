@@ -80,7 +80,7 @@ export function About() {
           >
             <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-[2.5rem] opacity-20 blur-3xl"></div>
             <img 
-              src="https://images.unsplash.com/photo-1770011305-b072c47c43d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" 
+              src="https://services.hashxinnovations.com/logo/eye.jpg" 
               alt="Team at work" 
               className="relative rounded-[2rem] shadow-2xl w-full border border-white/20"
             />
