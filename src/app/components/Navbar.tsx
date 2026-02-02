@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTheme } from "@/app/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
@@ -38,14 +38,14 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-purple-500/20 group-hover:scale-105 transition-transform">
-              H
-            </div>
-            <span className="font-bold text-2xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300">
-              HashX
-            </span>
+          <Link to="/" className="flex items-center">
+            <img
+              src="https://edux.hashx.live/assets/logo_hashx-CafftDCR.png"
+              alt="HashX Logo"
+              className="h-10 w-auto object-contain transition-transform hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Nav */}
