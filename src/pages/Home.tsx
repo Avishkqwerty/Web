@@ -41,10 +41,9 @@ export function Home() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-snug text-slate-900 dark:text-white mb-6">
-  Safeguarding the <br />
-  <GradientText>digital frontier</GradientText>
+              Safeguarding the <br />
+              <GradientText>digital frontier</GradientText>
             </h1>
-
             
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-8 leading-relaxed">
               We provide reliable, solid cyber security capabilities, producing
