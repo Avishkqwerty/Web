@@ -50,6 +50,7 @@ const logos = [
   "https://services.hashxinnovations.com/logo/Tropical%20Ventures.png",
   "https://services.hashxinnovations.com/logo/DINRO%20Holdings.png",
   "https://services.hashxinnovations.com/logo/DP%20Lesuire.png"
+  "https://melstacorp.com/assets/images/seo/preview.jpg"
 ];
 
 export function TrustedBy() {
