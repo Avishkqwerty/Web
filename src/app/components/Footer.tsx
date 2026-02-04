@@ -14,7 +14,7 @@ export function Footer() {
           <div className="space-y-6">
             <Link to="/" className="flex items-center">
               <img
-                src="https://edux.hashx.live/assets/logo_hashx-CafftDCR.png"
+                src="/logo_hashx-png.png"
                 alt="HashX Logo"
                 className="h-10 w-auto object-contain hover:scale-105 transition-transform"
               />

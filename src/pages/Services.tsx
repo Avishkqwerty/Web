@@ -1,6 +1,6 @@
-import { 
-  ArrowRight, Shield, Globe, Lock, Server, Smartphone, Eye, FileText, 
-  Users, Cloud, Database, Wifi, Activity, Flag, Monitor, Mail, ShieldAlert 
+import {
+  ArrowRight, Shield, Globe, Lock, Server, Smartphone, Eye, FileText,
+  Users, Cloud, Database, Wifi, Activity, Flag, Monitor, Mail, ShieldAlert
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GradientText } from "@/app/components/ui/GradientText";
@@ -90,14 +90,14 @@ export function Services() {
       {/* Hero */}
       <section className="relative pt-32 pb-20 px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-6">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white"
           >
             Comprehensive cybersecurity solutions to <GradientText>safeguard</GradientText> your data
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -114,6 +114,7 @@ export function Services() {
           {services.map((service, idx) => (
             <motion.div
               key={idx}
+              id={service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -121,19 +122,19 @@ export function Services() {
               className="group relative p-8 rounded-3xl bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-white/5 hover:border-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-3xl group-hover:bg-indigo-500/10 transition-colors pointer-events-none"></div>
-              
+
               <div className="w-14 h-14 rounded-2xl bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-sm">
                 <service.icon size={28} />
               </div>
-              
+
               <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                 {service.title}
               </h3>
-              
+
               <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed min-h-[60px]">
                 {service.desc}
               </p>
-              
+
               <Link to="#" className="inline-flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:gap-3 transition-all">
                 Read More <ArrowRight size={16} />
               </Link>
@@ -146,7 +147,7 @@ export function Services() {
       <section className="max-w-7xl mx-auto px-4 pb-20">
         <div className="rounded-[2.5rem] bg-slate-900 dark:bg-indigo-950/20 border border-indigo-500/20 p-12 md:p-20 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 pointer-events-none"></div>
-          
+
           <div className="relative z-10 max-w-3xl mx-auto space-y-8">
             <h2 className="text-3xl md:text-5xl font-bold text-white">Ready to secure your organization?</h2>
             <p className="text-indigo-200 text-lg">
