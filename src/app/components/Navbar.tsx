@@ -10,12 +10,12 @@ const navItems = [
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Events", path: "/events" },
+  { name: "Careers", path: "/careers" },
 ];
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,11 +26,15 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const showNav = !isHome || scrolled;
+
   return (
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-        scrolled
+        showNav
           ? "bg-white/70 dark:bg-black/70 backdrop-blur-xl border-gray-200 dark:border-white/10 shadow-lg"
           : "bg-transparent border-transparent"
       )}
@@ -41,27 +45,41 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="https://edux.hashx.live/assets/logo_hashx-CafftDCR.png"
+              src="/logo_hashx-png.png"
               alt="HashX Logo"
               className="h-10 w-auto object-contain transition-transform hover:scale-105"
             />
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <Link
+          <div
+            className={cn(
+              "hidden lg:flex items-center space-x-1 transition-all duration-500 ease-in-out",
+              showNav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+            )}
+          >
+            {navItems.map((item, idx) => (
+              <motion.div
                 key={item.name}
-                to={item.path}
-                className={cn(
-                  "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
-                  location.pathname === item.path
-                    ? "text-white bg-slate-900 dark:bg-white dark:text-black shadow-md"
-                    : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white"
-                )}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: isHome ? 1.2 + (idx * 0.1) : 0, // Wait for hero (1.2s) only on Home
+                  duration: 0.5
+                }}
               >
-                {item.name}
-              </Link>
+                <Link
+                  to={item.path}
+                  className={cn(
+                    "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 block",
+                    location.pathname === item.path
+                      ? "text-white bg-slate-900 dark:bg-white dark:text-black shadow-md"
+                      : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
             ))}
           </div>
 
