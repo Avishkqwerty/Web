@@ -18,7 +18,7 @@ export function Layout() {
   return (
     <div className="min-h-screen bg-white dark:bg-black text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 origin-left z-[100] animate-gradient-x"
+        className="fixed top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 origin-left z-[100] animate-gradient-x"
         style={{ scaleX }}
       />
       <style>{`

@@ -84,7 +84,7 @@ export function Testimonials() {
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                        Trusted by <GradientText>TECH</GradientText> Giants
+                        Trusted by <GradientText>Industry Leaders</GradientText>
                     </h2>
                     <p className="text-slate-400 text-lg">
                         See what our partners and clients have to say about their experience working with the HashX team.

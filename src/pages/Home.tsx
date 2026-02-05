@@ -5,7 +5,7 @@ import { motion, useInView, useSpring, useMotionValue } from "motion/react";
 import { useEffect, useRef } from "react";
 import { MagneticButton } from "@/app/components/ui/MagneticButton";
 import { TrustedBy } from "@/app/components/TrustedBy";
-import { MatrixParticleMesh } from "@/app/components/ui/MatrixParticleMesh";
+
 import { Testimonials } from "@/app/components/Testimonials";
 
 const services = [
@@ -53,8 +53,20 @@ export function Home() {
     <div className="flex flex-col overflow-hidden bg-white dark:bg-black">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        {/* Interactive Matrix Background */}
-        <MatrixParticleMesh />
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/back.jpg"
+            alt="Hero Background"
+            className="w-full h-full object-cover opacity-[0.07] blur-[5px]"
+            style={{
+              maskImage: "linear-gradient(to right, black 0%, rgba(0,0,0, 0.3) 50%, black 100%)",
+              WebkitMaskImage: "linear-gradient(to right, black 0%, rgba(0,0,0, 0.3) 50%, black 100%)"
+            }}
+          />
+          {/* Overlay gradient to ensure text readability and blending */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80"></div>
+        </div>
 
         <div className="max-w-7xl mx-auto text-center z-10 space-y-8 relative">
           <motion.div
@@ -165,11 +177,27 @@ export function Home() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Glowing Curved Horizon Line */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none overflow-hidden z-20">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+            className="absolute -bottom-[160px] left-1/2 -translate-x-1/2 w-[150%] md:w-[120%] h-[200px] rounded-[100%] border-t-4 border-purple-500 bg-gradient-to-b from-purple-600/40 to-transparent shadow-[0_-20px_100px_rgba(168,85,247,0.6)]"
+          >
+            {/* Inner glow line */}
+            <div className="absolute top-0 left-0 right-0 h-full rounded-[100%] border-t-2 border-indigo-300/80 blur-[3px] shadow-[0_-5px_20px_rgba(255,255,255,0.5)]"></div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Solutions We Offer */}
       <section className="py-24 bg-white dark:bg-black relative">
-        <div className="max-w-7xl mx-auto px-4">
+        {/* Gradient Blend from Hero */}
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-purple-900/20 via-indigo-900/10 to-transparent pointer-events-none z-0"></div>
+
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
               <motion.h2

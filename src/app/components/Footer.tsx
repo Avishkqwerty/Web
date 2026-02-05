@@ -73,10 +73,10 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-slate-900 dark:text-white mb-6">Legal</h3>
             <ul className="space-y-4 text-sm text-slate-600 dark:text-slate-400">
-              <li><Link to="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
-              <li><Link to="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Terms of Service</Link></li>
-              <li><Link to="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Cookie Policy</Link></li>
-              <li><Link to="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Legal Disclaimer</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Terms of Service</Link></li>
+              <li><Link to="/cookie-policy" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Cookie Policy</Link></li>
+              <li><Link to="/legal-disclaimer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Legal Disclaimer</Link></li>
             </ul>
           </div>
         </div>

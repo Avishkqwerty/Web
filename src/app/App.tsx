@@ -6,6 +6,11 @@ import { About } from "@/pages/About";
 import { Services } from "@/pages/Services";
 import { Events } from "@/pages/Events";
 import { Contact } from "@/pages/Contact";
+import { Careers } from "@/pages/Careers";
+import { PrivacyPolicy } from "@/pages/PrivacyPolicy";
+import { TermsOfService } from "@/pages/TermsOfService";
+import { CookiePolicy } from "@/pages/CookiePolicy";
+import { LegalDisclaimer } from "@/pages/LegalDisclaimer";
 
 // Placeholder for other pages
 const Placeholder = ({ title }: { title: string }) => (
@@ -25,7 +30,12 @@ export default function App() {
             <Route path="about" element={<About />} />
             <Route path="services" element={<Services />} />
             <Route path="events" element={<Events />} />
+            <Route path="careers" element={<Careers />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="terms-of-service" element={<TermsOfService />} />
+            <Route path="cookie-policy" element={<CookiePolicy />} />
+            <Route path="legal-disclaimer" element={<LegalDisclaimer />} />
             <Route path="verify" element={<Placeholder title="Verify your Achievement" />} />
             <Route path="products" element={<Placeholder title="Products" />} />
             <Route path="education" element={<Placeholder title="Education at HashX" />} />
