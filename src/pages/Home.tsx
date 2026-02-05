@@ -45,7 +45,7 @@ function Counter({ value }: { value: string }) {
 
 const stats = [
   { label: "Secure Service", value: "100%", sub: "Cybersecurity projects" },
-  { label: "Client Protection", value: "500+", sub: "Organizations" },
+  { label: "Client Protection", value: "70+", sub: "Organizations" },
   { label: "Expert Team", value: "50+", sub: "Certified Professionals" },
 ];
 
