@@ -7,6 +7,7 @@ import { MagneticButton } from "@/app/components/ui/MagneticButton";
 import { TrustedBy } from "@/app/components/TrustedBy";
 
 import { Testimonials } from "@/app/components/Testimonials";
+import { GlobalReach } from "@/app/components/GlobalReach";
 
 const services = [
   { title: "Vulnerability Management", icon: Shield, desc: "Identifying and mitigating security weaknesses before they're exploited.", link: "/services#vulnerability-management-vmaas-" },
@@ -184,10 +185,10 @@ export function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-            className="absolute -bottom-[160px] left-1/2 -translate-x-1/2 w-[150%] md:w-[120%] h-[200px] rounded-[100%] border-t-4 border-purple-500 bg-gradient-to-b from-purple-600/40 to-transparent shadow-[0_-20px_100px_rgba(168,85,247,0.6)]"
+            className="absolute -bottom-[160px] left-1/2 -translate-x-1/2 w-[150%] md:w-[120%] h-[200px] rounded-[100%] border-t-2 border-indigo-500/50 bg-gradient-to-b from-indigo-500/10 via-purple-500/10 to-transparent shadow-[0_-10px_50px_rgba(79,70,229,0.2)]"
           >
             {/* Inner glow line */}
-            <div className="absolute top-0 left-0 right-0 h-full rounded-[100%] border-t-2 border-indigo-300/80 blur-[3px] shadow-[0_-5px_20px_rgba(255,255,255,0.5)]"></div>
+            <div className="absolute top-0 left-0 right-0 h-full rounded-[100%] border-t border-indigo-300/30 blur-[2px] shadow-[0_-2px_15px_rgba(255,255,255,0.2)]"></div>
           </motion.div>
         </div>
       </section>
@@ -337,6 +338,9 @@ export function Home() {
       {/* Trusted By Section */}
       <TrustedBy />
 
+      {/* Global Reach Section */}
+      <GlobalReach />
+
       {/* Testimonials Section */}
       <Testimonials />
 
@@ -425,36 +429,62 @@ export function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group relative overflow-hidden rounded-3xl h-[400px]">
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="group relative overflow-hidden rounded-3xl h-[450px] border border-slate-200 dark:border-white/5 bg-slate-100 dark:bg-zinc-900 cursor-pointer"
+            >
               <img
                 src="https://images.unsplash.com/photo-1660836814985-8523a0d713b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
                 alt="HashX x Manthra"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-60"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-8">
-                <div className="text-indigo-400 font-bold mb-2">HashX x Manthra</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Collaboration with NSBM IEEE Student Community</h3>
-                <Link to="/events" className="text-white hover:text-indigo-400 font-semibold flex items-center gap-2">Read Case Study <ArrowRight size={16} /></Link>
-              </div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent group-hover:via-black/70 transition-all duration-500"></div>
 
-            <div className="group relative overflow-hidden rounded-3xl h-[400px]">
+              <div className="absolute bottom-0 left-0 p-8 w-full transform transition-transform duration-500 group-hover:-translate-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-bold uppercase tracking-widest mb-4 backdrop-blur-md">
+                  <Shield size={12} /> Case Study
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-2 leading-tight">HashX x Manthra</h3>
+                <p className="text-slate-300 mb-6 line-clamp-2 group-hover:text-white transition-colors">
+                  Securing the future of digital education with NSBM IEEE Student Community through comprehensive vulnerability assessments.
+                </p>
+                <div className="flex items-center text-indigo-400 font-bold group/btn">
+                  <span className="mr-2 group-hover/btn:underline decoration-2 underline-offset-4">Read Full Story</span>
+                  <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="group relative overflow-hidden rounded-3xl h-[450px] border border-slate-200 dark:border-white/5 bg-slate-100 dark:bg-zinc-900 cursor-pointer"
+            >
               <img
                 src="https://images.unsplash.com/photo-1614508569207-3295ac89d75f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
                 alt="Cloud Wars"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-60"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-8">
-                <div className="text-indigo-400 font-bold mb-2">HashX x Cloud Wars</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Cyber Battlefield with OREL IT</h3>
-                <Link to="/events" className="text-white hover:text-indigo-400 font-semibold flex items-center gap-2">Read Case Study <ArrowRight size={16} /></Link>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent group-hover:via-black/70 transition-all duration-500"></div>
+
+              <div className="absolute bottom-0 left-0 p-8 w-full transform transition-transform duration-500 group-hover:-translate-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-bold uppercase tracking-widest mb-4 backdrop-blur-md">
+                  <Database size={12} /> Competition
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-2 leading-tight">Cloud Wars</h3>
+                <p className="text-slate-300 mb-6 line-clamp-2 group-hover:text-white transition-colors">
+                  A high-stakes cyber battlefield partnership with OREL IT, testing the limits of cloud infrastructure security.
+                </p>
+                <div className="flex items-center text-purple-400 font-bold group/btn">
+                  <span className="mr-2 group-hover/btn:underline decoration-2 underline-offset-4">Read Full Story</span>
+                  <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section >
+
+
 
       {/* CTA Section */}
       < section className="py-24 px-4 bg-slate-50 dark:bg-black" >

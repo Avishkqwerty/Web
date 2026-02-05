@@ -91,8 +91,8 @@ export function Services() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 px-4 overflow-hidden">
         {/* Abstract Background */}
-        <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-indigo-50/50 dark:from-indigo-950/20 to-transparent pointer-events-none"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-full h-[800px] bg-gradient-to-b from-indigo-900/20 via-black to-black pointer-events-none"></div>
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10 space-y-8">
           <motion.div
@@ -100,12 +100,12 @@ export function Services() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-200 dark:border-indigo-700/50 text-indigo-600 dark:text-indigo-300 text-xs font-bold uppercase tracking-wider mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-6 backdrop-blur-md">
               <Shield size={14} /> World-Class Protection
             </div>
-            <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+            <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-white mb-6">
               Cybersecurity <br />
-              <span className="text-slate-400 dark:text-slate-600">Solutions for</span> <GradientText>Tomorrow</GradientText>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-600">Solutions for</span> <GradientText>Tomorrow</GradientText>
             </h1>
           </motion.div>
 
@@ -113,7 +113,7 @@ export function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed"
           >
             Comprehensive security strategies designed to protect your data, infrastructure, and reputation in an evolving digital landscape.
           </motion.p>
@@ -126,30 +126,39 @@ export function Services() {
           {services.map((service, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: idx * 0.05, duration: 0.5 }}
               className="group relative h-full"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 dark:from-indigo-500/10 dark:to-purple-500/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Card Container with Glassmorphism */}
+              <div className="relative h-full p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_10px_40px_-10px_rgba(79,70,229,0.3)] flex flex-col backdrop-blur-md overflow-hidden">
 
-              <div className="relative h-full p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/5 hover:border-indigo-500/50 dark:hover:border-indigo-400/30 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-indigo-500/10 flex flex-col">
-                <div className="w-14 h-14 rounded-2xl bg-indigo-50 dark:bg-white/5 border border-indigo-100 dark:border-white/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-6 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
-                  <service.icon size={26} />
-                </div>
+                {/* Hover Gradient Background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
-                <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                  {service.title}
-                </h3>
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Icon Box */}
+                  <div className="w-16 h-16 rounded-2xl bg-indigo-500/10 border border-white/5 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-black/20">
+                    <service.icon size={32} strokeWidth={1.5} />
+                  </div>
 
-                <p className="text-slate-600 dark:text-slate-400 mb-8 text-sm leading-relaxed flex-grow">
-                  {service.desc}
-                </p>
+                  <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-indigo-300 transition-colors">
+                    {service.title}
+                  </h3>
 
-                <div className="flex items-center text-sm font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors mt-auto">
-                  <span className="mr-2">Explore Solution</span>
-                  <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
+                  <p className="text-slate-400 mb-8 text-base leading-relaxed flex-grow">
+                    {service.desc}
+                  </p>
+
+                  {/* Bottom Action */}
+                  <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/5 group-hover:border-white/10 transition-colors">
+                    <span className="text-sm font-semibold text-slate-500 group-hover:text-white transition-colors">Learn more</span>
+                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
+                      <ArrowRight size={14} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

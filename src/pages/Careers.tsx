@@ -130,11 +130,12 @@ export function Careers() {
             </section>
 
             {/* Values Section */}
-            <section className="py-24 bg-slate-50 dark:bg-zinc-900/30">
-                <div className="max-w-7xl mx-auto px-4">
+            <section className="py-24 bg-black relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-black to-black pointer-events-none"></div>
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Why HashX?</h2>
-                        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Why HashX?</h2>
+                        <p className="text-slate-400 max-w-2xl mx-auto text-lg">
                             We believe in fostering an environment where creativity meets security.
                         </p>
                     </div>
@@ -147,15 +148,18 @@ export function Careers() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1, duration: 0.5 }}
-                                className="p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-slate-100 dark:border-white/5 hover:border-indigo-500/30 transition-all hover:shadow-xl hover:shadow-indigo-500/10 group"
+                                className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all hover:shadow-[0_0_30px_rgba(79,70,229,0.15)] relative overflow-hidden backdrop-blur-sm"
                             >
-                                <div className="w-14 h-14 rounded-2xl bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-6 group-hover:scale-110 transition-transform">
-                                    <item.icon size={28} />
+                                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="relative z-10">
+                                    <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300 shadow-inner border border-white/5">
+                                        <item.icon size={28} />
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-indigo-200 transition-colors">{item.title}</h3>
+                                    <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
+                                        {item.desc}
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">{item.title}</h3>
-                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                    {item.desc}
-                                </p>
                             </motion.div>
                         ))}
                     </div>
@@ -187,26 +191,29 @@ export function Careers() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="group p-6 md:p-8 rounded-2xl bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-white/10 hover:border-indigo-500/50 hover:bg-slate-50 dark:hover:bg-zinc-800/50 transition-all flex flex-col md:flex-row md:items-center justify-between gap-6 cursor-pointer"
+                                className="group p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all flex flex-col md:flex-row md:items-center justify-between gap-6 cursor-pointer backdrop-blur-md relative overflow-hidden"
                             >
-                                <div>
-                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-500 transition-colors">
-                                        {job.title}
-                                    </h3>
-                                    <div className="flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
-                                        <span className="flex items-center gap-1">
-                                            <Briefcase size={16} /> {job.department}
-                                        </span>
-                                        <span className="flex items-center gap-1">
-                                            <Globe size={16} /> {job.location}
-                                        </span>
-                                        <span className="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/10 text-xs font-semibold">
-                                            {job.type}
-                                        </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="relative z-10 w-full flex flex-col md:flex-row md:items-center justify-between gap-6">
+                                    <div>
+                                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
+                                            {job.title}
+                                        </h3>
+                                        <div className="flex flex-wrap gap-4 text-sm text-slate-400">
+                                            <span className="flex items-center gap-1 bg-white/5 px-3 py-1 rounded-full border border-white/5">
+                                                <Briefcase size={14} className="text-indigo-400" /> {job.department}
+                                            </span>
+                                            <span className="flex items-center gap-1 bg-white/5 px-3 py-1 rounded-full border border-white/5">
+                                                <Globe size={14} className="text-purple-400" /> {job.location}
+                                            </span>
+                                            <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 text-xs font-bold uppercase tracking-wider">
+                                                {job.type}
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold group-hover:translate-x-2 transition-transform">
-                                    <Link to="/contact">Apply Now</Link> <ArrowRight size={20} />
+                                    <div className="flex items-center gap-2 text-white font-bold group-hover:translate-x-2 transition-transform bg-indigo-600 px-6 py-3 rounded-full shadow-lg shadow-indigo-600/20 hover:bg-indigo-500">
+                                        <Link to="/contact">Apply Now</Link> <ArrowRight size={18} />
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
