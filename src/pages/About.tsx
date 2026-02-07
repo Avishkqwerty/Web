@@ -48,14 +48,16 @@ const team = [
 
 export function About() {
     return (
-        <div className="flex flex-col min-h-screen bg-white dark:bg-black pt-20">
+        <div className="flex flex-col min-h-screen bg-white dark:bg-black">
             {/* Hero Section */}
-            <section className="relative py-24 px-4 overflow-hidden min-h-[50vh] flex items-center justify-center">
+            <section className="relative pt-32 pb-24 px-4 overflow-hidden min-h-[50vh] flex items-center justify-center">
                 {/* Background Image/Gradient */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-black to-purple-900/20"></div>
                     {/* Abstract shapes */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+                    {/* Seamless transition to next section */}
+                    <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10"></div>
                 </div>
 
                 <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -64,10 +66,10 @@ export function About() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 text-slate-900 dark:text-white">
+                        <h1 className="text-4xl md:text-[60px] font-bold tracking-tight mb-8 leading-tight text-slate-900 dark:text-white">
                             We are <GradientText>HashX</GradientText>
                         </h1>
-                        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
                             Pioneering the future of digital security with a relentless commitment to innovation and integrity.
                         </p>
                     </motion.div>

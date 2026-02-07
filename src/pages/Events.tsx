@@ -92,10 +92,10 @@ export function Events() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-6 backdrop-blur-md">
                 <Calendar size={14} /> Upcoming & Past Events
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
+              <h1 className="text-4xl md:text-[60px] font-bold tracking-tight text-white mb-8 leading-tight">
                 HashX <GradientText>Engagements</GradientText>
               </h1>
-              <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+              <p className="text-xl md:text-2xl text-slate-400 max-w-3xl leading-relaxed mb-6">
                 Connecting with the community, fostering talent, and shaping the future of cybersecurity through interactive events and workshops.
               </p>
             </motion.div>
