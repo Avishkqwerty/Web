@@ -57,7 +57,7 @@ export function MagneticButton({
         outline: "border border-current",
     };
 
-    const combinedClasses = `${baseStyles} ${variants[variant]} ${className}`;
+    const combinedClasses = cn(baseStyles, variants[variant], className);
 
     const content = (
         <motion.div

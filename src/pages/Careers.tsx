@@ -93,10 +93,10 @@ function TrendingUpIcon(props: any) {
 
 export function Careers() {
     return (
-        <div className="flex flex-col min-h-screen bg-white dark:bg-black pt-20">
+        <div className="flex flex-col min-h-screen bg-white dark:bg-black">
             {/* Hero Section */}
             {/* Hero Section */}
-            <section className="relative py-24 px-4 overflow-hidden min-h-[60vh] flex items-center justify-center">
+            <section className="relative pt-32 pb-24 px-4 overflow-hidden min-h-[60vh] flex items-center justify-center">
                 {/* Background Gradients */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                     <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
@@ -114,14 +114,20 @@ export function Careers() {
                             <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
                             We are hiring!
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 text-slate-900 dark:text-white">
+                        <h1 className="text-4xl md:text-[60px] font-bold tracking-tight mb-8 leading-tight text-slate-900 dark:text-white">
                             Join the <GradientText>Guardians</GradientText> of the <br className="hidden md:block" /> Digital World
                         </h1>
-                        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12">
+                        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
                             At HashX, we don't just find bugs; we secure the future. Join a team of passionate experts dedicated to making the internet safer for everyone.
                         </p>
                         <div className="flex justify-center gap-4">
-                            <MagneticButton to="#positions" variant="primary">
+                            <MagneticButton
+                                onClick={() => {
+                                    const element = document.getElementById('positions');
+                                    element?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                variant="primary"
+                            >
                                 View Open Positions
                             </MagneticButton>
                         </div>
@@ -134,7 +140,7 @@ export function Careers() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-black to-black pointer-events-none"></div>
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Why HashX?</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Why <GradientText>HashX?</GradientText></h2>
                         <p className="text-slate-400 max-w-2xl mx-auto text-lg">
                             We believe in fostering an environment where creativity meets security.
                         </p>

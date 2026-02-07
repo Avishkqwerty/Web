@@ -16,7 +16,7 @@ export function Footer() {
               <img
                 src="/logo_hashx-png.png"
                 alt="HashX Logo"
-                className="h-10 w-auto object-contain hover:scale-105 transition-transform"
+                className="h-12 w-auto object-contain hover:scale-105 transition-transform"
               />
             </Link>
 

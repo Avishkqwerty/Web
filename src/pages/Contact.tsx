@@ -29,7 +29,7 @@ export function Contact() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight text-slate-900 dark:text-white"
           >
             Let's Start a <br className="hidden md:block" />
             <GradientText>Conversation</GradientText>
@@ -38,7 +38,7 @@ export function Contact() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
             Ready to secure your future? Our expert team is standing by to build a custom defense strategy for your unique needs.
           </motion.p>

@@ -169,10 +169,14 @@ export function Home() {
               }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
             >
-              <MagneticButton to="/about" variant="primary">
+              <MagneticButton
+                to="/about"
+                variant="primary"
+                className="text-sm px-6 py-3 border-2 border-transparent [background:linear-gradient(#0f172a,#0f172a)_padding-box,linear-gradient(to_right,#4f46e5,#9333ea)_border-box] dark:[background:linear-gradient(#ffffff,#ffffff)_padding-box,linear-gradient(to_right,#4f46e5,#9333ea)_border-box]"
+              >
                 Discover HashX
               </MagneticButton>
-              <MagneticButton to="/services" variant="secondary">
+              <MagneticButton to="/services" variant="secondary" className="text-sm px-6 py-3">
                 Our Services
               </MagneticButton>
             </motion.div>
