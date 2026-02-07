@@ -5,9 +5,9 @@ import { GradientText } from "./ui/GradientText";
 
 const testimonials = [
     {
-        quote: "We needed a partner who could understand complex fintech requirements. HashX not only understood them but improved upon our initial concepts significantly.",
-        author: "Elena Rodriguez",
-        role: "CEO, FutureScale",
+        quote: "It’s rare to find professionals who combine such deep technical knowledge with integrity and client-focused service. I would strongly recommend Avishka and the HashX team for any cybersecurity or digital recovery requirements.",
+        author: "Ameen Uvais,
+        role: "Director, Infinite Business Ventures (Pvt) Ltd",
         initials: "ER",
         rating: 5,
     },
