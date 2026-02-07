@@ -6,7 +6,7 @@ import { GradientText } from "./ui/GradientText";
 const testimonials = [
     {
         quote: "It’s rare to find professionals who combine such deep technical knowledge with integrity and client-focused service. I would strongly recommend Avishka and the HashX team for any cybersecurity or digital recovery requirements.",
-        author: "Ameen Uvais,
+        author: "Ameen Uvais",
         role: "Director, Infinite Business Ventures (Pvt) Ltd",
         initials: "ER",
         rating: 5,
